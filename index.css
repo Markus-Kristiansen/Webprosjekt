@@ -1,0 +1,1168 @@
+body{
+    margin: 0 1% 0 1%;
+    background-color: whitesmoke;
+}
+
+#mainContainer{
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    border: 0px solid black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+button:focus, input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+}
+
+.headerButton{
+    position: absolute;
+    border: 0px;
+    top: 100px;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    color: black;
+}
+
+.additionBtn{
+    position: absolute;
+    background-color: lightgray;
+    width: 172px;
+    height: 50.5px;
+    font-size: 15px;
+    text-align: left;
+    left: 290px;
+    color: black;
+    border: 0px;
+}
+
+#addChecklistRevealBtn{
+    top: 56.5px;
+}
+
+#addIconRevealBtn{
+    top: 112.5px;
+}
+
+#addDeadlineRevealBtn{
+    top: 169px;
+}
+
+.button{
+    position: absolute;
+    border: 1px solid black;
+    top: 90px;
+    height: 20px;
+    font-size: 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: lightgray;
+}
+
+#taskSubmitBtn{
+    top: 180px;
+    left: 10px;
+    background-color: lightgray;
+    color: black;
+    height: 30px;
+    width: 120px;
+    font-size: 15px;
+}
+
+#taskSubmitBtn:hover{
+    border-color: orange;
+    color: orange;
+}
+
+#memberSubmitBtn{
+    top: 130px;
+    left: 10px;
+    background-color: lightgray;
+    color: black;
+    height: 30px;
+    width: 55px;
+    font-size: 15px;
+}
+
+#memberSubmitBtn:hover{
+    border-color: orange;
+    color: orange;
+}
+
+#addTaskRevealBtn{
+    background-color: lightgray;
+}
+
+#addTaskRevealBtn:hover{
+    background-color: orange;
+}
+
+#addMemberRevealBtn{
+    left: 110px;
+    background-color: lightgray;
+}
+
+#addMemberRevealBtn:hover{
+    background-color: orange;
+}
+
+#revealMembersBtn{
+    background-color: lightgray;
+    left: 290px;
+}
+
+#revealMembersBtn:hover{
+    background-color: orange;
+}
+
+#revealArchiveBtn{
+    background-color: whitesmoke;
+    right: 3%;
+}
+
+#revealArchiveBtn:hover{
+    color: orange;
+}
+
+.additionForm{
+    position: absolute;
+    left: 468px;
+    height: 0px;
+    width: 250px;
+    opacity: 0;
+    padding: 10px;
+    background-color: lightgray;
+    color: black;
+    font-size: 17px;
+}
+
+#taskIconForm{
+    width: 400px;
+    padding-left: 100px;
+}
+
+#taskDescription{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    top: 40px;
+    left: 12px;
+    width: 240px;
+    height: 120px;
+    background-color: lightgray;
+    resize: none;
+    border: 0px;
+    font-size: 15px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    
+}
+
+#counting{
+    position: absolute;
+    top: 170px;
+    left: 15px;
+}
+
+
+.headerSection{
+    position: relative;
+    top: 150px;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, height 0.3s ease-in-out;
+    -webkit-transition: opacity 0.6s ease-in-out, height 0.3s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out, height 0.3s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out, height 0.3s ease-in-out;
+    -ms-transition: opacity 0.6s ease-in-out, height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+#membersSection{
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    grid-auto-columns: minmax(100px,1fr);
+    grid-column-gap: 20px;
+    grid-auto-flow: column;
+    overflow-x: auto;
+}
+
+#addMemberForm{
+    width: 263px;
+    height: 150px;
+    padding: 10px;
+    background-color: lightgray;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+label{
+    display: block;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#taskNameLabel{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#websiteName{
+    top: 0px;
+}
+
+#taskNameForm{
+    color:black;
+    float: left;
+    height: 200px;
+    width: 263px;
+    padding: 10px;
+    margin-right: 60px;
+    background-color: lightgray;
+}
+
+#taskChecklistForm{
+    float: left;
+}
+
+#taskChecklistInput{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    top: 40px;
+}
+
+#taskDeadlineInput{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    top: 40px;
+}
+
+#taskDeadlineDiv{
+    position: absolute;
+    top: 5px;
+    float: left;
+    color: gray;
+}
+
+#createChecklistBtn{
+    display: none;
+    top: 190px;
+    left: 10px;
+    font-size: 13px;
+    background: lightgray;
+    color: black;
+}
+
+#createChecklistBtn:hover{
+    color: orange;
+    border-color: orange;
+}
+
+#taskChecklist{
+    position: absolute;
+    padding-top: 3px;
+    top: -20px;
+    left: 280px;
+    height: 220px;
+    width: 0px;
+    opacity: 0;
+    background-color: whitesmoke;
+    transition: opacity 0.2s ease-out, width 0.2s ease-out;
+    -webkit-transition: opacity 0.2s ease-out, width 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out, width 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out, width 0.2s ease-out;
+    -ms-transition: opacity 0.2s ease-out, width 0.2s ease-out;
+    overflow-y: auto;
+}
+
+.checkListLi{
+    padding: 5px;
+    margin-left: -40px;
+    left: 100px;
+    border-bottom: 2.5px solid lightgray;
+    font-size: 15px;
+}
+
+.input{
+    display: block;
+    border: 0px;
+    background: transparent;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+
+.taskDescriptionPara{
+    position: absolute;
+    padding-top: 5px;
+    cursor: pointer;
+    text-align: center;
+    top: 70px;
+    height: 75px;
+    width: 95.5%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    overflow: scroll;
+}
+
+#taskMembers{
+    float: left;
+}
+
+input::placeholder{
+    font-family: fantasy;
+}
+textarea::placeholder{
+    font-family: fantasy;
+    padding-top: 5px;
+}
+
+#tasksTable{
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    height: 630px;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out, height 0.3s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out, height 0.3s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out, height 0.3s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out, height 0.3s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out, height 0.3s ease-in-out;
+}
+
+#archive{
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    top: 140px;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, height 0.3s ease-in-out;
+    -webkit-transition: opacity 0.2s ease-in-out, height 0.3s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out, height 0.3s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out, height 0.3s ease-in-out;
+    -ms-transition: opacity 0.2s ease-in-out, height 0.3s ease-in-out;
+    border-top: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    overflow: auto;
+}
+
+.tasks{
+    position: absolute;
+    text-align: center;
+    top: 89px;
+    height: 800px;
+    width: 50px;
+    display: grid-inline;
+    grid-row-gap: 20px;
+    overflow-y: auto;
+}
+
+#tasksHeadings{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    top: 40px;
+    border-top: 2px solid black;
+}
+
+.tasksHeading{
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+}
+
+#unstartedHeading{
+    left: -33.3%;
+}
+
+#ongoingHeading{
+    left: 0%;
+}
+
+#finishedHeading{
+    left: 33.3%;
+}
+
+#unstartedTasks{
+    border-right: 1px solid black;
+    height: 100vh;
+    width: 33.3%;
+}
+
+#ongoingTasks{
+    left: 33.3%;
+    border-right: 1px solid black;
+    height: 100vh;
+    width: 33.3%;
+}
+
+#finishedTasks{
+    height: 100vh;
+    right: 0;
+    width: 33.3%;
+}
+
+#ongoingTasks > div{
+    padding-left: 17px;
+}
+
+#finishedTasks > div{
+    padding-left: 17px;
+}
+
+.grabbable{
+    cursor: grab;
+}
+
+.grabbable:active{
+    cursor: grabbing;
+}
+
+.taskObject{
+    position: relative;
+    width: 89%;
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid gray;
+    cursor: grab;
+    transition: height 0.3s ease-in-out;
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    -ms-transition: height 0.3s ease-in-out;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.taskObject:active{
+    cursor: grabbing;
+}
+
+#checkList{
+    position: absolute;
+    top: 250px;
+    width: 95%;
+    height: 150px;
+    overflow-y: scroll;
+}
+
+#fullCheckpoint{
+    float: left;
+    display: flex;
+    padding: 5px;
+    width: 95%;
+}
+
+#checkList {
+    display: flex;
+    flex-direction: column;
+}
+
+#progressBarDiv{
+    position: absolute;
+    width: 87%;
+    height: 20px;
+    border: 1px solid lightgray;
+    top: 220px;
+}
+
+#taskMembers{
+    position: absolute;
+    top: 10px;
+}
+
+.taskObject:hover #deleteTaskBtn{
+    background-color:#f7fafa;
+}
+
+.taskObject:hover #expandTaskBtn{
+    background-color:#f7fafa;
+}
+
+.taskObject:hover #expandTaskBtnFinishedList{
+    background-color:#f7fafa;
+}
+
+.taskObject:hover #archiveTaskBtn{
+    background-color:#f7fafa;
+}
+
+.taskObject:hover{
+    background-color: #f7fafa;
+}
+
+#taskHeading{
+    text-align: center;
+    margin-top: 45px;
+}
+
+.memberObject{
+    width: 105px;
+    height: 120px;
+    margin-top: 5px;
+    cursor: grab;
+    text-align: center;
+    overflow: hidden;
+}
+
+.memberObject:active{
+    cursor: grabbing;
+}
+
+#memberNameHeading{
+    margin-top: 60px;
+    left: 20px;
+    width: 105px;
+    height: 40px;
+    overflow: scroll;
+    font-size: 15px;
+}
+
+.memberObject:hover #deleteMemberBtn{
+    visibility: visible;
+}
+
+#memberImg{
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 8px;
+}
+
+.buttonIcon{
+    display: none;
+    height: 40px;
+    width: 40px;
+    opacity: 0px;
+    border: 0px;
+    cursor: pointer;
+    background: lightgray;
+}
+
+#activeIcon{
+    position: absolute;
+    left: 15px;
+    height: 68px;
+    width: 80px;
+    padding-top: 12px;
+    text-align: center;
+}
+
+.buttonIcon:hover{
+    background: orange;
+}
+
+.imageIcon{
+    height: 20px;
+    width: auto;
+}
+
+#pickedIcon{
+    height: 70px;
+}
+
+#taskIcon{
+    position: absolute;
+    left: 46.5%;
+    height: 35px;
+    width: auto;
+}
+
+.memberSlot{
+    width: 105px;
+    height: 120px;
+    border: 1px dashed black;
+}
+
+#deleteTaskBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 0px;
+    background-color: #f0f0f0;
+}
+
+#expandTaskBtn{
+    position: absolute;
+    top: 215px;
+    right: 5px;
+    border: 0px;
+    background-color: #f0f0f0;
+}
+
+#expandTaskBtnFinishedList {
+    position: absolute;
+    top: 11px;
+    right: 74px;
+    border: 0px;
+    background-color: #f0f0f0;
+
+}
+
+#archiveTaskBtn {
+    position: absolute;
+    top: 12px;
+    right: 45px;
+    border: 0px;
+    background-color: #f0f0f0;
+}
+#deleteTaskBtn:hover{
+    cursor: pointer;
+}
+
+#expandTaskBtn:hover{
+    cursor: pointer;
+}
+
+#archiveTaskBtn:hover{
+    cursor: pointer;
+}
+
+#deleteMemberBtn{
+    border: 0px;
+    background-color: #f0f0f0;
+    padding-left: 30px;
+    float: right;
+    visibility: hidden;
+}
+
+#deleteMemberBtn:hover{
+    cursor: pointer;
+}
+
+.droppedMember{
+    position: relative;
+    height: 100px;
+    width: 200px;
+    overflow-y: scroll;
+    background-color: lightgrey;
+    display: inline-block;
+}
+
+#displayMemberOnTask{
+    left: 0px;
+}
+
+#languageSection {
+    position: relative;
+    color: black;
+    float: left;
+    left: -40px;
+    height: 100px;
+    width: 275px;
+    padding: 10px;
+    margin-right: 60px;
+    background-color: lightgray;
+}
+
+#englishBtn {
+    background-color: whitesmoke;
+    position: absolute;
+    cursor: pointer;
+    border: 1px solid gray;
+    height: 40px;
+    right: 15px;
+    width: 90px;
+    top: 15px;
+    font-size: 14px;
+    z-index: 2;
+    background-color: lightgray;
+    color: orange;
+    border-color: orange;
+    text-decoration: none;
+}
+
+.memberIconDiv {
+    height: 30px;
+    text-align: center;
+    line-height: 29px;
+    margin: auto;
+    width: 35px;
+    background-color:orange;
+    border-radius: 30%;
+    color: white;
+}
+
+#memberIconGrid {
+    position: absolute;
+    height: 30px;
+    width: 96.5%;
+    top: 183px;
+    left: 10px;
+    overflow: hidden;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(10px,1fr));
+    grid-auto-columns: minmax(10px,1fr);
+    grid-column-gap: 30px;
+    grid-auto-flow: column;
+    overflow-x: auto;
+}
+
+#memberIconGrid::-webkit-scrollbar{
+    height: 0px;
+    background: transparent;
+}
+
+.missingInput {
+    position: relative;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 23px;
+    line-height: 30px;
+    margin: auto;
+    background-color: red;
+    color: white;
+}
+
+#missingInputName {
+    right: -45%;
+    top: -34%;
+    visibility: hidden;
+}
+
+#missingInputCheckpoint {
+    right: -44%;
+    top: 0%;
+    visibility: hidden;
+
+}
+
+#norwegianBtn {
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    cursor: pointer;
+    position: absolute;
+    height: 40px;
+    width: 90px;
+    right: 15px;
+    top: 69px;
+    font-size: 14px;
+    z-index: 2;
+    background-color: lightgray;
+    color: black;
+    text-decoration: none;
+}
+
+#memberImg{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#norwegianBtn:hover{
+    border-color: orange;
+    color: orange;
+}
+
+.missingInput {
+    position: relative;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 23px;
+    line-height: 30px;
+    margin: auto;
+    background-color: red;
+    color: white;
+}
+
+#missingInputName {
+    right: -45%;
+    top: -34%;
+    visibility: hidden;
+}
+
+#missingInputCheckpoint {
+    right: -44%;
+    top: 0%;
+    visibility: hidden;
+
+}
+
+#missingInputTeamMember {
+    right: -44%;
+    top: -37%;
+    visibility: hidden;
+}
+
+
+/*                                              MEDIA QUERIES                                                         */
+
+@media (max-width: 1395px) {
+    #expandTaskBtn{
+        position: absolute;
+        top: 25px;
+        left: 2px;
+    }
+    #memberIconGrid {
+        position: absolute;
+        height: 25px;
+        width: 96.5%;
+        top: 100px;
+        left: 40px;
+        overflow-x: scroll;
+    }
+    .taskDescriptionPara{
+        top: 110px;
+        height: 80px;
+        width: 95.5%;
+    }
+}
+
+
+@media (max-width: 1142px) {
+    .taskObject{ 
+        width: 55%;
+        left: 20%;
+    }
+    #taskIcon{
+        left: 42%;
+    }
+    #archiveTaskBtn {
+        top: 42px;
+        right: 10px;
+    }
+    #memberIconGrid {
+        position: absolute;
+        height: 25px;
+        width: 96.5%;
+        top: 100px;
+        left: 40px;
+        overflow-x: scroll;
+    }
+    .taskDescriptionPara{
+        top: 110px;
+        height: 80px;
+        width: 90%;
+    }
+    #taskDeadlineDiv{
+        top: 80px;
+    }
+}
+
+@media (max-width: 874px) {
+    #taskIcon{
+        left: 38%;
+    }
+    #memberIconFlex {
+        position: absolute;
+        width: 52px;
+    }
+    #memberIconGrid {
+        position: absolute;
+        height: 25px;
+        width: 96.5%;
+        top: 100px;
+        left: 40px;
+        overflow-x: scroll;
+    }
+    .taskDescriptionPara{
+        top: 110px;
+        height: 80px;
+        width: 90%;
+    }
+    #taskDeadlineDiv{
+        top: 80px;
+    }
+}
+
+@media (max-width: 715px) {
+    #taskIcon{
+        left: 35%;
+    }
+    #tasksHeadings{
+        top: 70px;
+    }
+    .headerSection{
+        top: 170px;
+    }
+    #revealArchiveBtn{
+        top: 135px;
+        left: 105px;
+    }
+    .taskObject{ 
+        top: 20px;
+    }
+    #memberIconGrid {
+        position: absolute;
+        height: 25px;
+        width: 96.5%;
+        top: 100px;
+        left: 40px;
+        overflow-x: scroll;
+    }
+    .taskDescriptionPara{
+        top: 110px;
+        height: 80px;
+        width: 90%;
+    }
+    #taskDeadlineDiv{
+        top: 80px;
+    }
+
+}
+
+/*
+Media query for mobile device
+*/
+  
+@media (max-width: 500px){
+    #mainContainer{
+        overflow-x: auto;
+    }
+    .headerSection{
+        top: 170px;
+        height: 50px;
+    }
+    #archive{
+        position: relative;
+        z-index: 3;
+        top: 170px;
+    }
+
+    #unstartedHeading{
+        
+        left: 0px;
+    }
+
+    #ongoingHeading{
+        left: 360px;
+        
+    }
+
+    #finishedHeading{
+        left: 710px;
+    }
+
+    #unstartedTasks{
+        border-right: 1px solid black;
+        height: 100vh;
+        width: 350px;
+        left: 0px;
+    }
+    #ongoingTasks{
+        border-right: 1px solid black;
+        height: 100vh;
+        width: 365px;
+        left: 355px;
+    }
+
+    #finishedTasks{
+        right: 0;
+        width: 365px;
+        left: 710px;
+    }
+    .tasksHeading{
+        width: 100%;
+        position: absolute;
+        text-align: center;
+    }
+    .taskObject{
+        position: relative;
+        width: 300px;
+        left: 10px;
+        height: 200px;
+    }
+    .tasks{
+        position: absolute;
+        width: 120px;
+        left: -1000px;
+        
+    }
+    #revealArchiveBtn{
+        top: 10px;
+        left: 240px;
+    }
+    #revealMembersBtn{
+        background-color: lightgray;
+        left: 0;
+        top: 135px;
+        width: 95.8%;
+    }
+    #addTaskRevealBtn{
+        background-color: lightgray;
+        width: 38%;
+    }
+    #addMemberRevealBtn{
+        left: 150px;
+        width: 55.5%;
+        background-color: lightgray;
+    }
+    .memberIconDiv {
+        height: 25px;
+        text-align: center;
+        line-height: 24px;
+        margin: auto;
+        width: 25px;
+        background-color:orange;
+        border-radius: 50%;
+        color: white;
+    }
+
+    #memberIconFlex {
+        position: absolute;
+        width: 52px;
+    }
+    #taskNameForm{
+        color:black;
+        float: left;
+        height: 200px;
+        width: 200px;
+    }
+    .input{
+        width: 170px;
+    }
+    .additionForm{
+        left: 0;
+        height: 0px;
+        width: 200px;
+    }
+    #taskDescription{
+        width: 200px;
+        height: 110px;
+    }
+    #counting{
+        position: absolute;
+        top: 156px;
+        left: 15px;
+    }
+    #createChecklistBtn{
+        top: 150px;
+    }
+    #addChecklistRevealBtn{
+        top: 35px;
+        left: 230px;
+    }
+
+    #addIconRevealBtn{
+        top: 70px;
+        left: 230px;
+    }
+
+    #addDeadlineRevealBtn{
+        top: 105px;
+        left: 230px;
+    }
+    .additionBtn{
+        width: 172px;
+        height: 30px;
+        left: 230px;
+    }
+    #languageSection {
+        left: 185px;
+        height: 100px;
+        width: 154px;
+        top: -120px;
+    }
+    #englishBtn {
+        height: 20px;
+        right: 15px;
+        width: 90px;
+        top: 60px;
+    }
+    #norwegianBtn {
+        height: 20px;
+        width: 90px;
+        right: 15px;
+        top: 89px;
+    }
+    #adjustTextSection {
+        height: 100px;
+        width: 154px;
+    }
+    #adjustTextBiggerBtn {
+        height: 20px;
+        right: 15px;
+        width: 90px;
+        top: 60px;
+    }
+    #adjustTextStandardBtn {
+        height: 20px;
+        width: 90px;
+        right: 15px;
+        top: 89px;
+    }
+    .taskDescriptionPara{
+        top: 110px;
+        height: 80px;
+        width: 90%;
+    }
+    #taskIconForm{
+        left: 0%;
+    }
+    #taskIcon{
+        left: 42%;
+    }
+    #progressBarDiv{
+        width: 87%;
+        top: 220px;
+    }
+    #checkList{
+        position: absolute;
+        top: 250px;
+        width: 100px;
+        left: 0;
+        overflow-y: auto;
+    }
+    #expandTaskBtn{
+        position: absolute;
+        top: 95px;
+        left: 2px;
+    }
+    #taskDeadlineDiv{
+        top: 80px;
+    }
+    #memberIconGrid {
+        position: absolute;
+        height: 25px;
+        width: 96.5%;
+        top: 100px;
+        left: 40px;
+        overflow-x: scroll;
+    }
+    
+
+}
